@@ -1,0 +1,224 @@
+:root{
+    --FuentePrincipal : 'Karla', sans-serif;
+    /* Primary*/
+    --AzulVerde : hsl(179, 62%, 43%);
+    --AmarilloClaro : hsl(71, 73%, 54%);
+
+    /*### Neutral*/
+    --BlancoOscuro : hsl(204, 43%, 93%);
+    --Gris : hsl(218, 22%, 67%);
+}
+
+/* apply a natural box layout model to all elements, but allowing components to change */
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+  }
+  *, *:before, *:after {
+    box-sizing: inherit;
+  }
+
+  body{
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+    font-family: var(--FuentePrincipal);
+    background: var(--BlancoOscuro)
+  }
+
+  .contenedor{
+    width: 50%;
+    max-width: 120rem;
+    margin: 10rem auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    border-radius: 10px;
+  }
+
+  .main__contenedor> p, h1{
+    margin: 0;
+    padding: 0;
+  }
+
+  .main__contenedor{
+    grid-column: 1/3;
+    grid-row: 1/2;
+    background: #FFF;
+    padding: 4rem;
+    letter-spacing: 1px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    padding-bottom: 0rem;
+  }
+
+  .main__contenedor h1{
+    color: var(--AzulVerde);
+    font-weight: 700;
+    margin: 0;
+    margin-bottom: 3rem;
+  }
+
+  .main__contenedor :nth-child(2){
+    color: var(--AmarilloClaro);
+    font-weight: 700;
+    letter-spacing: 2px;
+    font-size: 20px;
+    margin-bottom: 2rem;
+  }
+
+  .main__contenedor :nth-child(3) {
+    color: var(--Gris);
+    padding-bottom: 0rem;
+    font-size: 2.2rem;
+  }
+
+.seccion__contenedorUno > h2, p {
+  margin: 0;
+  padding: 0;
+}
+
+.seccion__contenedorUno{
+    background-color: var(--AzulVerde);
+    color: #FFF;
+    padding: 3rem;
+    border-bottom-left-radius: 10px;
+}
+
+.seccion__contenedorUno :nth-child(1){
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
+.text_dollar{
+  display: grid;
+  grid-template-columns: 25% 75%;
+  align-content: center;
+}
+
+.seccion__contenedorUno .text_dollar p {
+  margin: 0rem;
+  padding: 0rem;
+}
+
+.text_dollar .dollar{
+  font-size: 4rem;
+}
+
+.tx_month {
+  align-self: center;
+  color: var(--BlancoOscuro);
+}
+
+.seccion__contenedorUno p {
+  margin-top: 1rem;
+}
+
+
+button{
+    width: 90%;
+    padding: 2rem 0;
+    background-color: var(--AmarilloClaro);
+    border-radius: 7px;
+    border: none;
+    color: #FFF;
+    font-weight: 700;
+    font-size: 1.5rem;
+    margin-top: 3rem;
+    margin-bottom: 2rem;
+    cursor: pointer;
+}
+
+.btn:hover {
+  background: var(--AzulVerde);
+  border: 1px solid var(--AmarilloClaro);
+  -webkit-box-shadow: 2px 7px 20px 5px rgba(185,191,101,1);
+  -moz-box-shadow: 2px 7px 20px 5px rgba(185,191,101,1);
+  box-shadow: 2px 7px 20px 5px rgba(185,191,101,1);
+}
+
+.seccion__contenedorDos > h2 {
+  margin: 0;
+  padding: 0;
+}
+
+.seccion__contenedorDos{
+  background: hsla(179, 62%, 43%, 0.6);
+  padding: 3rem;
+  color: #FFF;
+  font-weight: 400;
+}
+
+.lista_temas li{
+  color: var(--BlancoOscuro);
+  margin-left: -40px;
+}
+
+li {
+  list-style: none;
+}
+
+.estilo_list:hover {
+  color: #000;
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+
+@media (max-width: 375px){
+
+  .contenedor{
+    width: 90%;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr auto auto;
+  }
+
+  .seccion__contenedorUno{
+    grid-column: 1/1;
+    grid-row: 2/3;
+  }
+
+  .seccion__contenedorDos{
+    grid-column: 1/1;
+    grid-row: 3/4;
+  }
+
+  .main__contenedor{
+    grid-column: 1/1;
+    grid-row: 1/2;
+    background: #FFF;
+    padding: 2.5rem;
+  }
+
+  .main__contenedor :nth-child(2){
+    font-size: 17px;
+  }
+
+  .main__contenedor :nth-child(3) {
+    font-size: 15px;
+    line-height: 3rem;
+  }
+
+  button{
+    margin-bottom: 0rem;
+  }
+
+  .text_dollar{
+    grid-template-columns: 30% 70%;
+  }
+
+  .seccion__contenedorUno{
+    border-bottom-left-radius: 0px;
+    height: 300px;
+  }
+
+  .seccion__contenedorDos{
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+  }
+
+}
+
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
